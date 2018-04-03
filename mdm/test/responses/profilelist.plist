@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CommandUUID</key>
+	<string>0414ddf8-e49a-4cc9-ac4f-d2f9c012c364</string>
+	<key>ProfileList</key>
+	<array>
+		<dict>
+			<key>HasRemovalPasscode</key>
+			<false/>
+			<key>IsEncrypted</key>
+			<false/>
+			<key>PayloadContent</key>
+			<array>
+				<dict>
+					<key>PayloadDescription</key>
+					<string>Installs the root CA certificate for MicroMDM</string>
+					<key>PayloadDisplayName</key>
+					<string>Root certificate for MicroMDM</string>
+					<key>PayloadIdentifier</key>
+					<string>com.github.micromdm.ssl.ca</string>
+					<key>PayloadType</key>
+					<string>com.apple.security.root</string>
+					<key>PayloadVersion</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>PayloadDescription</key>
+					<string>Configures SCEP</string>
+					<key>PayloadDisplayName</key>
+					<string>SCEP</string>
+					<key>PayloadIdentifier</key>
+					<string>com.github.micromdm.scep</string>
+					<key>PayloadOrganization</key>
+					<string>MicroMDM</string>
+					<key>PayloadType</key>
+					<string>com.apple.security.scep</string>
+					<key>PayloadVersion</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>PayloadDescription</key>
+					<string>Enrolls with the MDM server</string>
+					<key>PayloadIdentifier</key>
+					<string>com.github.micromdm.mdm</string>
+					<key>PayloadOrganization</key>
+					<string>MicroMDM</string>
+					<key>PayloadType</key>
+					<string>com.apple.mdm</string>
+					<key>PayloadVersion</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>The server may alter your settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Enrollment Profile</string>
+			<key>PayloadIdentifier</key>
+			<string>com.github.micromdm.micromdm.mdm</string>
+			<key>PayloadOrganization</key>
+			<string>MicroMDM</string>
+			<key>PayloadRemovalDisallowed</key>
+			<false/>
+			<key>PayloadUUID</key>
+			<string>1cc86018-74ad-433b-9637-b4f544a73eb8</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>HasRemovalPasscode</key>
+			<false/>
+			<key>IsEncrypted</key>
+			<false/>
+			<key>IsManaged</key>
+			<true/>
+			<key>PayloadContent</key>
+			<array>
+				<dict>
+					<key>PayloadDescription</key>
+					<string>Global HTTP Proxy</string>
+					<key>PayloadDisplayName</key>
+					<string>Global HTTP Proxy</string>
+					<key>PayloadIdentifier</key>
+					<string>com.apple.proxy.http.global.6DFF55A0-7EE1-4066-9E51-0CE0C93D22EA</string>
+					<key>PayloadType</key>
+					<string>com.apple.proxy.http.global</string>
+					<key>PayloadVersion</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+			<key>PayloadDisplayName</key>
+			<string>Proxy</string>
+			<key>PayloadIdentifier</key>
+			<string>mdm.1xfx6791bb0dedebd40127c1dbadd1df68c752d9</string>
+			<key>PayloadOrganization</key>
+			<string>MicroMDM</string>
+			<key>PayloadRemovalDisallowed</key>
+			<false/>
+			<key>PayloadUUID</key>
+			<string>http://google.com</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>Status</key>
+	<string>Acknowledged</string>
+	<key>UDID</key>
+	<string>1xfx6791bb0dedebd40127c1dbadd1df68c752d9</string>
+</dict>
+</plist>

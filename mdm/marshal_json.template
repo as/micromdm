@@ -1,0 +1,54 @@
+func (c *CommandRequest) UnmarshalJSON(d []byte) error {
+	var j struct {
+		RequestType string `json:"request_type"`
+	}
+	if err := json.Unmarshal(d, &j); err != nil {
+		return err
+	}
+	switch j.RequestType {
+	case "ProfileList",
+		"ProvisioningProfileList",
+		"CertificateList",
+		"SecurityInfo",
+		"StopMirroring",
+		"ClearRestrictionsPassword",
+		"LogOutUser",
+		"DisableLostMode",
+		"DeviceLocation",
+		"ManagedMediaList",
+		"OSUpdateStatus",
+		"DeviceConfigured",
+		"AvailableOSUpdates",
+		"Restrictions",
+		"UserList",
+		"ShutDownDevice",
+		"RestartDevice":
+		var x struct {
+			RequestType string `json:"request_type"`
+			UDID        string `json:"udid"`
+		}
+		if err := json.Unmarshal(d, &x); err != nil {
+			return err
+		}
+		c.RequestType = x.RequestType
+		c.UDID = x.UDID
+        return nil
+	{{ range . }}
+	case "{{.Case}}":
+		var x struct {
+			RequestType string `json:"request_type"`
+			UDID        string `json:"udid"`
+			{{.Case}}
+		}
+		if err := json.Unmarshal(d, &x); err != nil {
+			return err
+		}
+		c.RequestType = x.RequestType
+		c.UDID = x.UDID
+		c.{{.Case}} = x.{{.Case}}
+		return nil
+	{{ end }}
+	default:
+		return fmt.Errorf("mdm: unknown request_type %s", j.RequestType)
+	}
+}
